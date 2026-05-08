@@ -1,24 +1,24 @@
-[![Go Report Card](https://goreportcard.com/badge/github.com/guitmz/n26)](https://goreportcard.com/report/github.com/guitmz/n26) [![](https://images.microbadger.com/badges/image/guitmz/n26.svg)](https://microbadger.com/images/guitmz/n26 "Get your own image badge on microbadger.com")
+[![Go Report Card](https://goreportcard.com/badge/github.com/emmaoluga-sketch/n26)](https://goreportcard.com/report/github.com/emmaoluga-sketch/n26) [![](https://images.microbadger.com/badges/image/emmaoluga-sketch/n26.svg)](https://microbadger.com/images/emmaoluga-sketch/n26 "Get your own image badge on microbadger.com")
 
 # n26
 Go API and CLI to get information of your N26 account
 
 # Installation
-- macOS: Available via Homebrew. Just run `brew install guitmz/tools/n26`
+- macOS: Available via Homebrew. Just run `brew install emmaoluga-sketch/tools/n26`
 - Linux: You can manually build this project or download a binary release.
 
-You can also install with `go get -u github.com/guitmz/n26/cmd/n26` (make sure you have your Go env setup correctly). 
+You can also install with `go get -u github.com/emmaoluga-sketch/n26/cmd/n26` (make sure you have your Go env setup correctly). 
 
 # Docker
-A Dockerfile is also provided and the prebuilt image is available for pulling: `docker pull guitmz/n26` or `docker pull guitmz/n26:DESIRED_TAG`
+A Dockerfile is also provided and the prebuilt image is available for pulling: `docker pull emmaoluga-sketch/n26` or `docker pull emmaoluga-sketch/n26:DESIRED_TAG`
 
 You can run it like:
 
-`$ docker run -e N26_USERNAME="username" -e N26_PASSWORD="password" -e N26_DEVICE_TOKEN="device_token_uuid" guitmz/n26`
+`$ docker run -e N26_USERNAME="username" -e N26_PASSWORD="password" -e N26_DEVICE_TOKEN="device_token_uuid" emmaoluga-sketch/n26`
 
 or if you want to be asked for your credentials:
 
-`$ docker run -ti -e N26_DEVICE_TOKEN="device_token_uuid" guitmz/n26`
+`$ docker run -ti -e N26_DEVICE_TOKEN="device_token_uuid" emmaoluga-sketch/n26`
 
 # Authentication
 Since 14th of September 2019, N26 requires a login confirmation (2 factor authentication) from the paired phone N26 application to login on devices that are not paired (more details [here](https://n26.com/en-eu/blog/what-is-psd2)). This means you will receive a notification on your phone when you start using this library to request data. This tool checks for your login confirmation every 5 seconds. If you fail to approve the login request within 60 seconds an exception is raised.
@@ -99,8 +99,3 @@ You can run `n26 help` for usage description.
 - Better error handling
 - A terminal UI could also be implemented
 - ?
-
-# References
-- https://github.com/femueller/python-n26 (MFA reference)
-- https://github.com/PierrickP/n26 (API reference)
-- https://github.com/Rots (thank you for the PRs!)
